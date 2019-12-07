@@ -12,7 +12,7 @@ Installation
 
 
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+1. The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
 
 
@@ -22,7 +22,7 @@ Either run
 
 ```
 
-php composer.phar require --prefer-dist itshkacomua/yii2-link "*"
+php composer.phar require --prefer-dist itshkacomua/yii2-link "dev-master"
 
 ```
 
@@ -34,7 +34,7 @@ or add
 
 ```
 
-"itshkacomua/yii2-link": "*"
+"itshkacomua/yii2-link": "dev-master"
 
 ```
 
@@ -44,7 +44,11 @@ to the require section of your `composer.json` file.
 
 
 
+2. In the console of the root directory of the site, run the command
 
+ ```
+ php yii migrate --migrationPath=@itshkacomua/link/migrations/
+```
 
 Usage
 

@@ -11,10 +11,7 @@
       "homepage": "https://itshka.com.ua/"
     }
   ],
-  "stability":"stable",
-  "version":"1.0.0",
   "type": "package",
-  "minimum-stability":"dev",
   "require": {
     "php": ">=5.4.0",
     "yiisoft/yii2": "~2.0.0"

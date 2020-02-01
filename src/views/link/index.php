@@ -29,6 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'url:url',
             'parent_id',
+            //['attribute' => 'parent_id', 'value' => '', 'filter' => \itshkacomua\link\models\Link::getParentList()],
             'created_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],

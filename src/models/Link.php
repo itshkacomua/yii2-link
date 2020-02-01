@@ -51,4 +51,22 @@ class Link extends \yii\db\ActiveRecord
             'user_id' => Yii::t('app', 'User ID'),
         ];
     }
+
+    public function getParent()
+    {
+        return $this->hasMany(Link::className(), ['id' => 'parent_id']);
+    }
+
+    public function getParentName()
+    {
+        return (isset($this->parent)) ? $this->parent->name:'Корневая директория';
+    }
+
+    /**
+     * @return array
+     */
+    public static function getParentList()
+    {
+        return array_merge([0 => 'Корневая директория'], \yii\helpers\ArrayHelper::map(self::find()->all(),'id', 'name'));
+    }
 }
